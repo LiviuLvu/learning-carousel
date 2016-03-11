@@ -29,7 +29,7 @@ function createCarousel() {
       tilt: -4.5,
       minOpacity: 1,
       minScale: 0.45,
-      duration: 700,
+      duration: 300,
       clickToFocus: true,
       clickToFocusCallback: showCaption
    });
@@ -70,11 +70,11 @@ function showCaption() {
    var newHeight = $('#captions').height() + 'px';
    $('.caption_container').animate({
       'height': newHeight
-   }, 500, function() {
+   }, 100, function() {
       // fade in text
       $('#captions').animate({
          'opacity': 1
-      }, 250);
+      }, 100);
    });
 }
 
@@ -82,5 +82,5 @@ function hideCaption() {
    // fade out text
    $('#captions').animate({
       'opacity': 0
-   }, 250);
+   }, 100);
 }

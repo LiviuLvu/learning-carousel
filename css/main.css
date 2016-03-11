@@ -4,9 +4,14 @@
 /* Written by Chris Converse for lynda.com  */
 
 @charset "UTF-8";
+
+body {
+   margin: 0px;
+   padding-bottom: 20px
+}
 .my_carousel {
    position: relative;
-   width: 760px;
+   max-width: 760px;
    margin: 0px;
    background-color: #fff;
    margin: 30px auto 20px auto;
@@ -16,11 +21,12 @@
    height: 340px;
    margin: 0px;
    background: #000 url(../img/background.jpg) no-repeat 0px 0px;
+   background-position: center;
 }
 
 #carousel {
    margin: 0px auto 0px auto;
-   width: 600px;
+   max-width: 600px;
    height: 300px;
 }
 
@@ -47,10 +53,10 @@
 }
 
 .caption_container {
-   width: 435px;
+   max-width: 435px;
    border-left: 3px solid #713e1b;
-   margin: 0px 0px 0px 165px;
-   padding: 0px 0px 0px 20px;
+   margin: 30px 0px 0px 63px;
+   padding-left: 20px;
 }
 
 #captions h2 {
@@ -70,11 +76,29 @@
 
 .leaves {
    position: absolute;
-   top: 270px;
-   left: 102px;
+   top: 320px;
+   left: 0px;
    z-index: 1000;
 }
 
 .carousel_data {
    display: none;
+}
+
+@media screen and (max-width: 760px) {
+   .my_carousel {
+      margin: 0px auto 0px auto;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .caption_container {
+      margin: 30px 10px 0px 45px;
+   }
+   .leaves {
+      top: 320px;
+      left: 3px;
+      width: 50px;
+      height: auto;
+   }
 }
