@@ -54,10 +54,10 @@ function createCustonButtons() {
    // keyboard arrow navigation
    $(document).keyup(function(event) {
       if (event.keyCode == 37) {
-         $('#carousel').roundabout('animateToNextChild', showCaption);
+         $('#carousel').roundabout('animateToPreviousChild', showCaption);
          console.log('left');
       } else if (event.keyCode == 39) {
-         $('#carousel').roundabout('animateToPreviousChild', showCaption);
+         $('#carousel').roundabout('animateToNextChild', showCaption);
          console.log('right');
       }
    });
